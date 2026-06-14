@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Skills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form method="POST" action="/search">
+    <h2>Search Skills</h2>
+
+    <input type="text" name="skill" placeholder="Search Skill" required>
+
+    <button type="submit">Search</button>
+
+    <a href="/dashboard">Back</a>
+</form>
+
+{% if results %}
+    <div class="card">
+        <h2>Results</h2>
+
+        {% for skill in results %}
+            <p><b>Can Teach:</b> {{ skill.teach_skill }}</p>
+            <p><b>Wants To Learn:</b> {{ skill.learn_skill }}</p>
+            <p><b>Experience:</b> {{ skill.experience }}</p>
+            <hr>
+        {% endfor %}
+    </div>
+{% endif %}
+
+</body>
+</html>

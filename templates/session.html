@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Booking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form method="POST" action="/session">
+    <h2>Book Session</h2>
+
+    <label>Date</label>
+    <input type="date" name="date" required>
+
+    <label>Time</label>
+    <input type="time" name="time" required>
+
+    <button type="submit">Book Session</button>
+
+    <a href="/dashboard">Back</a>
+</form>
+
+</body>
+</html>

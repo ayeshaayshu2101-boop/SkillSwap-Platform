@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Skills</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form method="POST" action="/addskill">
+    <h2>Add Your Skills</h2>
+
+    <label>Skill You Can Teach</label>
+    <input type="text" name="teach_skill" placeholder="Python" required>
+
+    <label>Skill You Want to Learn</label>
+    <input type="text" name="learn_skill" placeholder="Graphic Design" required>
+
+    <label>Experience Level</label>
+    <input type="text" name="experience" placeholder="Beginner" required>
+
+    <button type="submit">Save Skills</button>
+
+    <a href="/dashboard">Back to Dashboard</a>
+</form>
+
+</body>
+</html>

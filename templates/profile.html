@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<form>
+    <h2>User Profile</h2>
+
+    <label>Name</label>
+    <input type="text" placeholder="Your Name">
+
+    <label>Bio</label>
+    <input type="text" placeholder="Tell about yourself">
+
+    <label>Skills Offered</label>
+    <input type="text" placeholder="Python, Java">
+
+    <label>Skills Wanted</label>
+    <input type="text" placeholder="Graphic Design">
+
+    <label>Experience Level</label>
+    <input type="text" placeholder="Beginner">
+
+    <button type="submit">Save Profile</button>
+
+    <a href="/dashboard">Back to Dashboard</a>
+</form>
+
+</body>
+</html>
